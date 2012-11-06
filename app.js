@@ -112,6 +112,10 @@ var emitMessageHandler = {
       if (count >= lines.length - 1) {
         clearInterval(timer);
         novelPlaying[room] = false;
+        io.sockets.in(room).emit('novel-content', { 
+          author  : 'novel-bot',
+          content : '指定された章の表示が完了しました'
+        });
       }
       io.sockets.in(room).emit('novel-content', { 
         author  : 'novel-bot',
