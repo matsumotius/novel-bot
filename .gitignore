@@ -1,0 +1,4 @@
+*.swp
+config.sample.js
+npm-debug.log
+node_modules

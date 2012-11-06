@@ -1,0 +1,28 @@
+body {
+  padding : 50px;
+  font    : 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color : #00B7FF;
+}
+
+#chat {
+  margin  : 0px;
+  padding : 0px;
+  height  : 600px;
+}
+
+#timeline {
+  margin        : 24px 0px 24px 0px;
+  padding       : 12px 0px 12px 0px;
+  height        : 350px;
+  border-top    : 1px solid #ccc;
+  border-bottom : 1px solid #ccc;
+  overflow      : auto;
+}
+
+#latest-timeline {
+  bottom : 0px;
+}
+

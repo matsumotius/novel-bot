@@ -1,0 +1,21 @@
+doctype 5
+html
+  head
+    title novel-bot
+    script(type='text/javascript', src='/socket.io/socket.io.js')
+    script(type='text/javascript', src='/javascripts/jquery-1.8.2.min.js')
+    script(type='text/javascript', src='/javascripts/smartenter.js')
+    script(type='text/javascript', src='/javascripts/nvbt.common.js')
+    script(type='text/javascript', src='/javascripts/nvbt.chat.js')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    #container(class='row-fluid')
+      #info(class='span8')
+        h3
+          span(id='title') novel-bot
+        #description
+          小説の内容が自動で流れるチャット
+      #timeline(class='span8')
+        #latest-timeline
+      input(class='span8', id='message-input', type='text', placeholder='ここにメッセージを入力。Enterで送信')
