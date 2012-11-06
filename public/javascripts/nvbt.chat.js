@@ -23,20 +23,22 @@ $(function(){
     chat.addTimeline(novelLineDom);
   };
 
-  chat.requiredAutoScroll = false;
+  chat.requiredAutoScroll = true;
 
-$('#timeline').scroll(function(e){
-  var scrolltop    = chat.timeline.attr('scrollTop');
-  var scrollheight = chat.timeline.attr('scrollHeight');
-  var windowheight = chat.timeline.attr('clientHeight');
-  var scrolloffset = 10;
-  chat.requiredAutoScroll = scrolltop >= (scrollheight - (windowheight + scrolloffset));
-});
+  chat.autoScrollButton = $('#autoscroll-button');
+  chat.autoScrollButton.click(function(e){
+    if (chat.requiredAutoScroll) {
+      chat.autoScrollButton.text('自動でスクロールする')
+    } else {
+      chat.autoScrollButton.text('自動スクロールをやめる')
+    }
+    chat.requiredAutoScroll = !chat.requiredAutoScroll;
+  });
 
   chat.addTimeline = function(dom) {
     chat.latestTimeline.before(dom);
     if (chat.requiredAutoScroll) {
-      chat.timeline.scrollTop(chat.timeline.height());
+      chat.timeline.scrollTop(chat.timeline.height() + 999999);
     } 
   };
 

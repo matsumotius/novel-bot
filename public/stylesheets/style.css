@@ -26,3 +26,6 @@ a {
   bottom : 0px;
 }
 
+#autoscroll-button {
+  float : right;
+}
